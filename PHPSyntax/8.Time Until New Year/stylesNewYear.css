@@ -1,0 +1,12 @@
+div {
+    background-color:rgba(111, 244, 252, 0.54);
+    border:1px;
+    border-radius:3px;
+	border-color:black;
+    box-shadow:inherit;
+    width:200px;
+    height:200px;
+}
+p {
+    text-align:left;
+}

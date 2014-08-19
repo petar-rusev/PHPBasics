@@ -1,0 +1,16 @@
+﻿table{
+border-collapse: collapse;
+position:absolute;
+left:400px;
+top:50px
+}
+td{
+    border:1px solid black;
+    padding:0px;
+    margin:0px;
+	
+}
+.fill {
+    background-color:orange;
+	border-spacing:0px;
+}
