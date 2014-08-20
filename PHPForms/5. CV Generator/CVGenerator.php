@@ -15,7 +15,7 @@
     Male<input type="radio" name="Male" value="Male"><br>
     <label>Birth date</label><br>
     <input type="text" name="BirthDate" value="dd/mm/yyyy"><br>
-    <label>Nationality</label><br>
+    <label for >Nationality</label><br>
     <select name="Nationality">
         <option value="Bulgarian">Bulgarian</option>
         <option value="Turkish">Turkish</option>
@@ -40,6 +40,8 @@
 <fieldset>
     <legend>Other Skills</legend>
     <label>Languages</label><br>
+    <form>
+    </form>
     <label>Driver's License</label>
         B<input type="checkbox" value="B">
         A<input type="checkbox" value="A">
@@ -48,4 +50,13 @@
     <input type="submit" value="Submit">
 </form>
 </body>
+<script>
+    function addInput(){
+        var newDiv=document.createElement("div");
+        newDiv.setAttribute('id',1);
+        newDiv.innerHTML=
+            "<input type=\"text\" name=\"langs[]\">"+
+        "<a href=\"javascript:removeInput(1)\"><button>Remove Language</button></a>"
+    }
+</script>
 </html>
