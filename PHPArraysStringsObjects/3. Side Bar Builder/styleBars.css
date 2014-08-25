@@ -1,0 +1,16 @@
+aside{
+display:block;
+}
+#cont{
+background:#aec6e7;
+border: 1px solid;
+border-radius: 25px;
+height:200px;
+width:200px;
+position:relative;
+left:100px;
+}
+hr{
+position:relative;
+top: 5px;
+}
