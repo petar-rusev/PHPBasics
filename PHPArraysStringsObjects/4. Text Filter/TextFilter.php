@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Text Filter</title>
+    <title>Text Filter</title>
 <head>
 <body>
 <form method="post">
@@ -17,21 +17,10 @@ if(isset($_POST["text"])&& isset($_POST["banned"])){
     $replace='';
     $newText='';
     $textlen=strlen($text);
-    for($i=0;$i<sizeof($banned);$i++){
-        for($x=0;$x<strlen($banned[$i]);$x++){
-            $replace.='*';
-        }
-        if(preg_match("/$banned[$i]/i", $text)){
-            $newText.=str_replace($banned[$i],$replace,$text);
-        }
-
-        $replace='';
+    foreach ($banned as $word) {
+        $text = str_replace($word, str_repeat('*', strlen($word)), $text);
     }
-    $result='';
-    for($y=0;$y<$textlen;$y++){
-        $result.=$newText[$y];
-    }
-    echo $result;
+    echo $text;
 }
 ?>
 </body>
